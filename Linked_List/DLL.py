@@ -27,6 +27,17 @@ class dll:
         n.prev=temp
         
         
+    def insert_pos(self):
+        pos=int(input('Enter the Position : '))
+        data=int(input('Enter the Data : '))
+        n=Node(data)
+        temp=self.head
+        for i in range(0,pos-1):
+            temp=temp.next 
+        n.previous=temp
+        n.next=temp.next
+        temp.next.previous=n 
+        temp.next=n
         
     def display(self):
         if self.head is None:
@@ -37,6 +48,7 @@ class dll:
                 print(temp.data,'<-->',end='')
                 temp=temp.next
                 
+
                 
         
                 
@@ -61,4 +73,7 @@ l.insert_at_beg()
 l.display()
 print('\nInsert at Last')
 l.insert_end()
+l.display()
+print('\nInsert at Position')
+l.insert_pos()
 l.display()
