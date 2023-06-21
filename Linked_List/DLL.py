@@ -52,6 +52,16 @@ class dll:
         previous.next=temp.next
         temp.next=None
     
+    def delete_at_position(self):
+        pos=int(input('Enter the Position:'))
+        temp=self.head.next
+        previous=self.head
+        for i in range(1,pos-1):
+            temp=temp.next
+            previous=previous.next
+        previous.next=temp.next
+        temp.next=None
+    
     
     def display(self):
         if self.head is None:
@@ -96,4 +106,7 @@ l.delete_beg()
 l.display()
 print('\nDelete At End')
 l.delete_last()
+l.display()
+print('\nDelete At Position')
+l.delete_at_position()
 l.display()
