@@ -43,6 +43,16 @@ class dll:
         self.head=temp.next
         temp.next=None
     
+    def delete_last(self):
+        temp=self.head.next
+        previous=self.head
+        while temp.next is not None:
+            temp=temp.next
+            previous=previous.next
+        previous.next=temp.next
+        temp.next=None
+    
+    
     def display(self):
         if self.head is None:
             print('Is Empty')
@@ -51,7 +61,7 @@ class dll:
             while temp:
                 print(temp.data,'<-->',end='')
                 temp=temp.next
-                
+            print('NULL')
 
                 
         
@@ -83,4 +93,7 @@ l.insert_pos()
 l.display()
 print('\nDelete At Begining')
 l.delete_beg()
+l.display()
+print('\nDelete At End')
+l.delete_last()
 l.display()
