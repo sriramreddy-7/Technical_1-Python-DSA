@@ -26,7 +26,6 @@ class dll:
         temp.next=n 
         n.prev=temp
         
-        
     def insert_pos(self):
         pos=int(input('Enter the Position : '))
         data=int(input('Enter the Data : '))
@@ -39,6 +38,11 @@ class dll:
         temp.next.previous=n 
         temp.next=n
         
+    def delete_beg(self):
+        temp=self.head
+        self.head=temp.next
+        temp.next=None
+    
     def display(self):
         if self.head is None:
             print('Is Empty')
@@ -76,4 +80,7 @@ l.insert_end()
 l.display()
 print('\nInsert at Position')
 l.insert_pos()
+l.display()
+print('\nDelete At Begining')
+l.delete_beg()
 l.display()
