@@ -37,4 +37,3 @@ while 1:
     else:
         print('Please enter the correct option!')
         
-        
