@@ -1,4 +1,5 @@
 stack=[]
+empty='Stack Is Empty'
 def push():
     n=int(input('Enter the How many element need to add:'))
     for i in range(0,n):
@@ -7,17 +8,23 @@ def push():
     print('Inserted Sucessfully')
     print(stack)
 def pop():
-    stack.pop()
-    print('Deleted Sucessfully')
-    print(stack)  
+    if len(stack) == 0:
+        print(empty)
+    else:
+        stack.pop()
+        print('Deleted Sucessfully')
+        print(stack)  
     
 def display():
-    print('Stack Elements')
-    print(stack)
+    if len(stack) == 0:
+        print(empty)
+    else:  
+        print('Stack Elements')
+        print(stack)
         
 def peek():
     if len(stack) == 0:
-        print('Stack is Empty')
+        print(empty)
     else:
         print(stack[-1])              
 
