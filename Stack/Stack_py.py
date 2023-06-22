@@ -48,11 +48,6 @@ def display():
         else:
             print('Choose Correct Option')
         
-def peek():
-    if len(stack) == 0:
-        print(empty)
-    else:
-        print(stack[-1])              
 
 while 1:
     print('1.PUSH\n2.POP\n3.DISPLAY\n4.QUIT')
