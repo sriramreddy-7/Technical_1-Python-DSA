@@ -1,7 +1,7 @@
 # create a stack with user input extarct only even input and display 
 stack=[]
 empty='Stack Is Empty'
-print('\n--Stack Operations --\n')
+print('\n--Stack Operations Display Even Or Odd--\n')
 def push():
     n=int(input('Enter the How many element need to add:'))
     for i in range(0,n):
@@ -62,5 +62,4 @@ while 1:
         break
     else:
         print('Please enter the correct option!')
-        
         
