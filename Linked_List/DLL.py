@@ -73,9 +73,6 @@ class dll:
                 temp=temp.next
             print('NULL')
 
-                
-        
-                
 l=dll()
 n1=Node(100)
 l.head=n1
