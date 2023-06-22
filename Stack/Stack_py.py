@@ -24,19 +24,26 @@ def display():
     else:  
         print('Stack Elements')
         t=int(input('1-EVEN | 2-ODD\n'))
+        flag=0
         if t==1:
             for i in stack:
                 if i%2==0:
                     print('[',i,']',end='')
+                    flag=1
                 else:
                     continue
+            if flag!=1:
+                print('No Even Element is Existed in the List!')
             print()    
         elif t==2:
             for i in stack:
                 if i%2!=0:
                     print('[',i,']',end='')
+                    flag=1
                 else:
                     continue
+            if flag!=1:
+                print('No Odd Element is Existed in the List!')
             print()
         else:
             print('Choose Correct Option')
