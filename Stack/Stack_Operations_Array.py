@@ -11,8 +11,8 @@ def pop():
     if len(stack) == 0:
         print(empty)
     else:
-        stack.pop()
-        print('Deleted Sucessfully')
+        e=stack.pop()
+        print('Deleted Sucessfully:',e)
         print(stack)  
     
 def display():
