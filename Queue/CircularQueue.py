@@ -27,7 +27,7 @@ class CircularQueue():
             temp=self.queue[self.front]
             self.front=(self.front+1)%self.size
             return temp
-         
+        
     def display(self):
             if (self.front)==-1:
                 print('Queue is Empty!')
