@@ -10,7 +10,9 @@ while True:
             pq.append((n,m))
         print('Sucessfully Added')
     elif ch==2:
-        pq.pop(0)
+        pq.sort(reverse=True) 
+        pq.pop()
+        print(pq)
     elif ch==3:
         pq.sort(reverse=True)    
         print(pq)
