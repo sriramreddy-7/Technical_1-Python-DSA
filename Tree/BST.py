@@ -25,11 +25,14 @@ def inorder(root):
         inorder(root.right)
         
 def search(root,key):
+    # key=int(input('Enter the Search Element: '))
     if root is None or root.val == key:
+        print('Found')
         return root 
     
     if root.val< key:
-       return search(root.right,key)
+        print('Not Found')
+        return search(root.right,key)
    
     return search(root.left,key)
    
@@ -47,6 +50,6 @@ r=insert(r,-3)
 # r=insert(r,75)
 # r=insert(r,78)
 inorder(r)
-search(r,56)
+search(r,26)
 
 #wap to create the program for above list and perform serach operation for the given number
