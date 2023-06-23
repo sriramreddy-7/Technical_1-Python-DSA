@@ -1,3 +1,4 @@
+s=[]
 class Node:
     def __init__(self,key):
         self.left=None
@@ -20,8 +21,20 @@ def inorder(root):
     if root:
         inorder(root.left)
         print(root.val)
+        s.append(root.val)
         inorder(root.right)
         
+def search(root,key):
+    if root is None or root.val == key:
+        return root 
+    
+    if root.val< key:
+       return search(root.right,key)
+   
+    return search(root.left,key)
+   
+   
+               
         
         
 r=Node(50)
@@ -34,3 +47,6 @@ r=insert(r,-3)
 # r=insert(r,75)
 # r=insert(r,78)
 inorder(r)
+search(r,56)
+
+#wap to create the program for above list and perform serach operation for the given number
